@@ -1,28 +1,35 @@
-import { Flex, Box, Link, Spacer } from '@chakra-ui/react'
+import Link from 'next/link'
+import { Flex, Box, Link as CLink, Spacer } from '@chakra-ui/react'
 
 export const Navigation = () => (
   <Flex>
     <Box d='flex' p={4}>
       <Box>
-        <Link>コミュニティ概要</Link>
+        <Link href='/about'>
+          <CLink>コミュニティ概要</CLink>
+        </Link>
       </Box>
       <Box ml={4}>
-        <Link>行動規範</Link>
+        <Link href='/code-of-conduct'>
+          <CLink>行動規範</CLink>
+        </Link>
       </Box>
       <Box ml={4}>
-        <Link>イベントレポート</Link>
+        <Link href='/blog'>
+          <CLink>イベントレポート</CLink>
+        </Link>
       </Box>
     </Box>
     <Spacer />
     <Box d='flex' p={4}>
       <Box>
-        <Link>Twitter</Link>
+        <CLink>Twitter</CLink>
       </Box>
       <Box ml={4}>
-        <Link>GitHub</Link>
+        <CLink>GitHub</CLink>
       </Box>
       <Box ml={4}>
-        <Link>Connpass</Link>
+        <CLink>Connpass</CLink>
       </Box>
     </Box>
   </Flex>
